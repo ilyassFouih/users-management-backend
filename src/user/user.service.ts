@@ -29,7 +29,6 @@ export class UserService {
 
     async createUser(createUserDto: CreateUserDto): Promise<Response> {
         let user = { 
-            id:-1,
             imageUrl:this.getUserAvatar(createUserDto.firstName,createUserDto.lastname),
             ...createUserDto 
         }
